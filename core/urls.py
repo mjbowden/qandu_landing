@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
-from .views import * 
+from .views import *
 
 urlpatterns = patterns('',
-                      url(r'^$', home.as_view(), name='home'),
-                      )
+  url(r'^$', home.as_view(), name='home'),
+  url(r'^question/create/$', QuestionCreateView.as_view(), name='question_create'),
+ )
